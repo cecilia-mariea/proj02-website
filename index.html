@@ -156,7 +156,7 @@
     </header>
 
     <main>
-      <h2>Proposition: [STATE PROPOSITION]</h2>
+      <h2>Proposition: For a variety of countries, the carbon footprint of bank loans is decreasing or steady over time.</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
@@ -169,9 +169,10 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Group countries by development level and taking the average. Removes visual cluter, but still tells retains interesting context of the countries.</li>
+          <li>Use normalized values (values at 2015 = 100) to abstract variation. Also use the 2015-2018 subset to utilize the normalization to 2015 as a deceiving 'ceiling'.</li>
+          <li>Scale the y-axis to start 87.5 to make the decreasing slope sharper, emphasizing the time trend.</li>
+          <li>Use a line plot to represent time-series data. Use annotations to quantify the decrease such that the reader does less visual work to quantify themselves. Still, the sharp slopes are still draw attention.</li>
         </ul>
       </section>
 
@@ -186,9 +187,10 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Use non-normalized emission intensities to reveal increasing carbon footprints without comparing to 2015 levels.</li>
+          <li>Use per country values, without grouping, to remove the effect of averaging trends of low emitters.</li>
+          <li>Only represent a subset of coutries present in the dataset to remove visual clutter and emphasize increasing trends.</li>
+          <li> Use annotations to quantify increased carbon footprint to emphasize increasing emissions. This is especially useful for the bottom four countries of the top 5 emitters since they are closely grouped. </li>
         </ul>
       </section>
 
