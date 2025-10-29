@@ -170,9 +170,21 @@
 
         <ul>
           <li>Group countries by development level and taking the average. Removes visual cluter, but still tells retains interesting context of the countries.</li>
-          <li>Use normalized values (values at 2015 = 100) to abstract variation. Also use the 2015-2018 subset to utilize the normalization to 2015 as a deceiving 'ceiling'.</li>
-          <li>Scale the y-axis to start 87.5 to make the decreasing slope sharper, emphasizing the time trend.</li>
-          <li>Use a line plot to represent time-series data. Use annotations to quantify the decrease such that the reader does less visual work to quantify themselves. Still, the sharp slopes are still draw attention.</li>
+            <ul>
+              <li>Score: -1 ; Grouping data points by such a category contributes to an interesting story, but aggregating by means without utilizing markers of deviations removes variations within the group and hides part of the truth from the viewer.</li>
+            </ul>
+          <li>Use normalized values (values at 2015 = 100) to abstract variation. Also use the 2015-2018 subset.</li>
+            <ul>
+              <li> Score: -1 ; Normalization to an internal datapoint has utility in time trend data, but creates an artificial 'ceiling' by using the subset.</li>
+            </ul>
+          <li>Scale the y-axis to start 87.5.</li>
+            <ul>
+              <li> Score: -2 ; Makes the decreasing trend sharper, dramaticizing it to the viewer. </li>
+            </ul>
+          <li>Use a line plot to represent time-series data. Use annotations to quantify the decrease.</li>
+            <ul>
+              <li> Score: 2 ; There is no distortion of the data and annotations provide clarity. The reader does less visual work to quantify the differences using spacial context.</li>
+            </ul>
         </ul>
       </section>
 
@@ -188,9 +200,21 @@
 
         <ul>
           <li>Use non-normalized emission intensities to reveal increasing carbon footprints without comparing to 2015 levels.</li>
-          <li>Use per country values, without grouping, to remove the effect of averaging trends of low emitters.</li>
-          <li>Only represent a subset of coutries present in the dataset to remove visual clutter and emphasize increasing trends.</li>
-          <li> Use annotations to quantify increased carbon footprint to emphasize increasing emissions. This is especially useful for the bottom four countries of the top 5 emitters since they are closely grouped. </li>
+            <ul> 
+              <li> Score: 2 ; Visualizes absolute values, rather than ratios that often abstract away the impact of the data from the viewer.</li>
+            </ul>
+          <li>Use per country values, without grouping.</li>
+            <ul>
+              <li>Score: 2 ; Retains  within group variation, removing artificial smoothing.</li>
+            </ul>
+          <li>Only represent a subset of coutries present in the dataset.</li>
+            <ul>
+              <li> Score: -1 ; Removes visual clutter, but cherry picks data to emphasize increasing trends.
+            </ul>
+          <li> Use annotations to quantify increased carbon footprint to emphasize increasing emissions. </li>
+            <ul>
+              <li>Score: 2 ;  Again, provides clarity of the differences that are being represented. This is especially useful for the bottom four countries of the top 5 emitters since they are closely grouped.</li>
+            </ul>
         </ul>
       </section>
 
