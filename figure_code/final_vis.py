@@ -55,7 +55,7 @@ development_means = df_2015.groupby(['development', 'Year']).agg({
 plt.figure(figsize=(10, 6))
 sns.lineplot(data=development_means, x='Year', y='ECFLIN',
              hue='development', marker='s', style='development', palette="crest")
-plt.suptitle("Carbon Emissions Related Economic Investments Decreasing Across \n Developing and Emerging Countries", fontsize=18, fontweight="bold")
+plt.suptitle("The Decreasing Footprint: Heavy Loaning Industries are Lowering Carbon Emissions \n Across Developing and Emerging Countries", fontsize=18, fontweight="bold")
 plt.title('Mean CO2 per $1M USD loan, normalized to 2015 (Developed vs. Emerging Countries)', fontsize=12, style='italic')
 plt.xticks(range(2015,2019,1))
 plt.ylabel('Normalized CO2 Emissions (Metric Tons per $1M USD, 2015 = 100)', fontsize=12,  fontweight="bold")

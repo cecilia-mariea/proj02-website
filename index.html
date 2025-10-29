@@ -144,19 +144,19 @@
   <body>
     <header>
       <h1>
-        <small>Assignment 4</small>
+        <small>Project 2</small>
         Persuasive or Deceptive Visualization?
       </h1>
 
       <p><strong>Cecilia Marie Aban</strong> — <em>caban@ucsd.edu</em></p>
       <p><strong>Taylor Chiu</strong> — <em>tachiu@ucsd.edu</em></p>
       <p><strong>Maggie Zhang</strong> — <em>maz007@ucsd.edu</em></p>
-      <p><strong>Su Love Wai</strong> — <em></em></p>
+      <p><strong>Su Love Wai</strong> — <em>lwai@ucsd.edu</em></p>
 
     </header>
 
     <main>
-      <h2>Proposition: For a variety of countries, the carbon footprint of bank loans is decreasing or steady over time.</h2>
+      <h2>Proposition: For a variety of countries, carbon emissions per dollar lent are declining across important industries.</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
@@ -171,23 +171,32 @@
         <ul>
           <li>Grouping countries by development level, using the average as the aggregation method. Removes visual clutter, but still tells retains interesting context of the countries.</li>
             <ul>
-              <li><b>Score: -1.5</b></li>
-              <li>Grouping data points by development level is dishonest because there isn't even an equal or fair way to sample emerging, developing, and developed countries from the actual population of countries, let alone represent it using just the countries from this dataset. This is already a convenience sample, and grouping it by an uneven metric definitely is not representative of actual trends. Additionally, even if this were a good sample of countries, aggregating by means without utilizing markers of deviations removes variations within the group and hides much of the truth from the viewer.</li>
+              <li><b>Score: -2</b></li>
+              <li>Grouping data points by development level is dishonest because there isn't even an equal or fair way to sample emerging, developing, and developed countries from the actual population of countries, let alone represent it using just the countries from this dataset. 
+                This is already a convenience sample, and grouping it by an uneven metric definitely is not representative of actual trends. 
+                Additionally, even if this were a good sample of countries, aggregating by means without utilizing markers of deviations removes variations within the group and hides much of the truth from the viewer.
+                We chose to group by means because they are simple and easy to understand, but medians or ranges would have been more honest.</li>
+              </li>
             </ul>
           <li>Using normalized values (values at 2015 = 100) and only representing cleaned data from the 2015-2018 subset.</li>
             <ul>
               <li><b>Score: -1</b></li>
-              <li>Normalization to an internal datapoint has utility in time trend data, but an artificial 'ceiling' is created by the subset. An artificial start year of 2015 is also created by starting from where the recorded data was normalized, but it is also a decent solution to solve the issue of some data being MAR by year.</li>
+              <li>Normalization to an internal datapoint has utility in time trend data, but an artificial 'ceiling' is created by the subset. 
+                An artificial start year of 2015 is also created by starting from where the recorded data was normalized, but it is also a decent solution to solve the issue of some data being MAR by year.
+                We chose this solution because it would portray the data in the most flattering light in terms of the proposal.</li>
             </ul>
           <li>Truncating the y-axis to start 87.5.</li>
             <ul>
               <li><b>Score: -2</b></li>
-              <li> Makes the decreasing trend sharper, dramaticizing it to the viewer. There were also values from before 2015 that might be below this 87.5 minimum, but in order to present a misleading narrative that emphasizes the decline, these values are effectively ignored twice-over.</li>
+              <li> Makes the decreasing trend sharper, dramaticizing it to the viewer. T
+                here were also values from before 2015 that might be below this 87.5 minimum, but in order to present a misleading narrative that emphasizes the decline, these values are effectively ignored twice-over. The rationale is similar to the previous point.</li>
             </ul>
           <li>Using a line plot to represent time-series data. Using annotations to quantify the exact percentage of decrease from start to finish.</li>
             <ul>
               <li><b>Score: 2</b> </li>
-              <li>There is no distortion of the data, and the annotations provide additional clarity that might not be obvious at first. The reader does less visual work to quantify the differences using spacial context.</li>
+              <li>There is no distortion of the data, and the annotations provide additional clarity that might not be obvious at first. 
+                The reader does less visual work to quantify the differences using spacial context.
+                This is an important choice because it enhances the viewer's understanding of the data without requiring them to engage in complex interpretations.</li>
             </ul>
         </ul>
       </section>
@@ -206,22 +215,30 @@
           <li>Using non-normalized emission intensities to reveal increasing carbon footprints without comparing to any set levels.</li>
             <ul> 
               <li> <b>Score: 2</b> </li>
-              <li> Visualizes absolute values, rather than ratios that often abstract away the impact of the data from the viewer.</li>
+              <li> Visualizes absolute values on a representative scale starting at 0 for the y-axis and 2011 (first year data is available) for the x-axis. 
+                The absolute values represented on an accurate scale make the scale of the impact more visible, unlike normalization, scaling, or truncation that often soften or obscure the impact of the data from the viewer.
+                We chose to be very earnest here both because it is a more effective way to communicate the data's significance and because the data already shows some trends without these transformations.</li>
             </ul>
-          <li>Use per country values, without grouping.</li>
+          <li>Using per-country values without grouping.</li>
             <ul>
               <li><b>Score: 2</b> </li>
-              <li> Retains  within group variation, removing artificial smoothing.</li>
+              <li> Displaying each country individually preserves within-group variation and prevents smoothing due to aggregation types that could obscure important differences. 
+                This allows the viewer to see both an overall trend and the individual trends across countries, which increases the honesty of the visualization and lends credence to the “increasing trend” message.
+                This design choice was also made because it is very earnest and reflects the true state of the data without manipulation.</li>
             </ul>
-          <li>Only represent a subset of countries present in the dataset.</li>
+          <li>Only representing a subset of countries present in the dataset.</li>
             <ul>
-              <li><b>Score: -1</b> </li>
-              <li> visual clutter, but cherry picks data to emphasize increasing trends.</li>
+              <li><b>Score: -1.5</b> </li>
+              <li> Although this removes visual clutter, the overall sampling comes from cherrypicked data: developing countries that actually show and even emphasize increasing trends. 
+                This is dishonest because it misrepresents the overall trends in the dataset by only showing countries that counter the proposition. 
+                However, this was a deliberate choice to deceive the viewer into seeing this trend as a breakdown of "representative" countries that are actually not fair representatives.</li>
+              </li>
             </ul>
           <li> Use annotations to quantify increased carbon footprint to emphasize increasing emissions. </li>
             <ul>
               <li><b>Score: 2</b> </li>
-              <li>Provides clarity of the differences that are being represented. This is especially useful for the bottom four countries of the top 5 emitters since they are closely grouped.</li>
+              <li>Provides clarity of the differences that are being represented. This is especially useful for the bottom four countries of the top 5 emitters since they are closely grouped.
+                This is an important choice because it enhances the viewer's understanding of the data without requiring them to engage in complex interpretations.</li>
             </ul>
         </ul>
       </section>
@@ -230,10 +247,22 @@
         <h2>Final Reflection</h2>
 
         <p>
-          Designing these two visualizations with a per-country, time-based dataset made clear the impact of groupings, cherry-picking, aggregating, internal normalization, and axes truncation on earnest representations. Line plots to visualize time-series data and annotating the quantity of change were straightforward decisions. They were made simply to help viewers interpret the data without distortion. Other decisions required more involved decisions making. Grouping countries initially seems like a useful way to concisely tell a particular story, but it's clear that suppressing within-group variation is deceiving. It was initially difficult to find a grouping to support our proposition since carbon emissions are generally increasing accros all impact factors. We also initially tried grouping by regions. 
+          Designing these two visualizations with a per-country, time-based dataset made clear the impact of groupings, cherrypicking, aggregating, internal normalization, and axes truncation on visualizations both earnest and deceptive. 
+          Line plots to visualize time-series data and annotating the quantity of change were straightforward decisions that can be applied to any visualizations of a similar nature. 
+          These choices were made simply to help viewers interpret the data without distortion. 
+          Other decisions required a more sophisticated understanding of the dataset and the story we wanted to tell as well as the concepts of expressiveness and effectiveness of visual encodings.
+          Grouping countries may be useful when representing similar or homogenous data, but with our deceptive use of grouping to persuade viewers of our proposition, it is clear that suppressing within-group variation can change the viewer's perception of the data.
+          It was initially difficult to find a grouping to support our proposition since carbon emissions are generally increasing across many factors. We also initially tried grouping by regions, but that did not lead to anything conclusive or in support of the proposition. 
+          Similarly, cherrypicking countries with data that countered our proposition and also seemed representative of some related group was difficult, since many countries had noisy data or did not have clear trends. 
+          However, once we found countries that had clear increasing trends, it was easy to build a persuasive narrative around them.
         </p>
         <p>
-          It was unsurprising how easy it was to make deciving design decisions with data that was normalized or sparse. However, it was surprising how difficult it was to make these decisions not immediately obvious. Although, the line between being clear and inearnest is not always explicit. There must be a responsiblity to represent the datasets without introducing artifacts. Simultaneously, persuasion is not inherently unethical, like encodings to guide the viewers attention. Once design decisions stop being made to increase a viewer's understanding and start being made to exaggerate drama or be convenient, unethical design begins.
+          It was unsurprisingly easy to be deceptive with this dataset, since carbon emissions are a politically charged topic in the first place, and deceptively manipulating small datasets with lots of missing data is straightforward.
+          However, it was pretty surprising to realize that earnest and deceptive design choices are sometimes the same, and context and intent really matter in these cases.
+          To some extent, there should be a standardized framework for evaluating the earnestness/ethics of design choices because it is so easy to even be unintentionally deceiving.
+          At the same time, the whole point of a visualization is show a pattern, and the persuasiveness of this pattern is not inherently dishonest. 
+          Ethical analysis and visualization should have the end goal of increasing the audiences' understanding. 
+          Design choices should never be made with a claim and direction already in mind—manipulating data to fit a predefined narrative is unethical, and any choices made to this effect are "misleading".
         </p>
       </section>
     </main>
