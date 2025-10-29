@@ -55,10 +55,10 @@ development_means = df_2015.groupby(['development', 'Year']).agg({
 plt.figure(figsize=(10, 6))
 sns.lineplot(data=development_means, x='Year', y='ECFLIN',
              hue='development', marker='s', style='development', palette="crest")
-plt.suptitle("Decreasing Economic Investment in Carbon Emission in Both \n Developing and Emerging Countries", fontsize=18, fontweight="bold")
-plt.title('Time based trend of the mean normalized ratio of metric tons of CO2 emitted \n per 1million USD  by development level.', fontsize=12, style='italic')
+plt.suptitle("Carbon Emissions Related Economic Investments Decreasing Across \n Developing and Emerging Countries", fontsize=18, fontweight="bold")
+plt.title('Mean CO2 per $1M USD loan, normalized to 2015 (Developed vs. Emerging Countries)', fontsize=12, style='italic')
 plt.xticks(range(2015,2019,1))
-plt.ylabel('Ratio Metric Tons of CO2 emitted per 1million USD\n(normalized to 2015=100)', fontsize=12,  fontweight="bold")
+plt.ylabel('Normalized CO2 Emissions (Metric Tons per $1M USD, 2015 = 100)', fontsize=12,  fontweight="bold")
 plt.xlabel("Year", fontsize=12, fontweight="bold")
 
 ## emerging annotations
@@ -126,12 +126,12 @@ sns.scatterplot(
     palette="crest",
     legend=False
 )
-plt.suptitle("Increasing Carbon Footprint of Bank Loans \nin Key Emerging Economies", fontsize=18, fontweight="bold")
-plt.title("Time based trend of raw emission for amount loaned in top emitters of emerging countries.", fontsize=12, style="italic")
+plt.suptitle("Carbon Emissions Related Economic Investments Increasing Across \nKey Emerging Economies", fontsize=18, fontweight="bold")
+plt.title("Raw emissions per $1M USD loan, by top emitting countries (2015-2018)", fontsize=12, style="italic")
 plt.tight_layout()
 plt.xticks(range(2011,2019,1))
 plt.grid(True,alpha=0.3)
-plt.ylabel("Metric Carbon Tons per $1M USD Loaned", fontsize=12, fontweight="bold")
+plt.ylabel("CO2 Emissions (Metric Tons per $1M USD Loaned)", fontsize=12, fontweight="bold")
 plt.xlabel("Year", fontsize=12,fontweight="bold")
 
 ## Legened
