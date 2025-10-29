@@ -51,6 +51,7 @@ development_means = df_2015.groupby(['development', 'Year']).agg({
 }).rename(columns={'ISO2': 'ISO2'}).reset_index()
 
 # figure 1
+
 plt.figure(figsize=(10, 6))
 sns.lineplot(data=development_means, x='Year', y='ECFLIN',
              hue='development', marker='s', style='development', palette="crest")
@@ -82,6 +83,7 @@ plt.annotate(
     fontsize=12
 )
 
+## legend 
 textstr = (
     "Developed: BE, CA, DK, FI, FR, DE, HK, IS, IE, IT, JP, KR, MT, NL, PT, SI, ES, CH\n"
     "Emerging: BR, CO, CR, HR, CY, CZ, EE, GR, HU, KZ, LV, LT, MY, PE, PH, SK, TN, TR"
